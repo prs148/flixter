@@ -20,13 +20,16 @@
          <%= link_to "More Info...", course_path(course), class: 'btn btn-lg btn-primary' %>
       </div>
     </div>   
-    <hr class="col-8 offset-2">
+    <hr class="col-8 offset-2 ">
     <br class="clr" />
   <% end %>
+
+<hr class=" solid">
 
 
 
   <h1> What I'm Teaching </h1>
+  <br />
     <% current_user.courses.each do |course| %>
       <h3 class="text-center">
         <%= link_to course.title, course_path(course) %>
@@ -40,7 +43,7 @@
           <%= course.description %>
         </div>
         <div class="col-12 col-sm-4 text-center">
-          <%= link_to "More Info..", course_path(course), class: 'btn btn-lg btn-primary' %>
+          <%= link_to "More Info...", course_path(course), class: 'btn btn-lg btn-primary' %>
         </div>
       </div>    
       <hr class="col-8 offset-2">
